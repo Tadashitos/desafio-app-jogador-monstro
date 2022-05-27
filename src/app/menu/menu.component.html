@@ -1,0 +1,66 @@
+<app-topo [jogador]="jogador" [monstro]="monstro"></app-topo>
+
+<div class="container" *ngIf="jogoAcabou == false">
+
+    <div class="row pt-5 pb-5 text-center">
+
+        <div class="col-md-3">
+            
+            <button class="btn btn-danger" (click)="ataque()">ATAQUE</button>
+            
+        </div>
+
+        <div class="col-md-3">
+
+            <button class="btn btn-warning" (click)="ataqueEspecial()">ATAQUE ESPECIAL</button>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <button class="btn btn-success" (click)="cura()">CURAR</button>
+            
+        </div>
+
+        <div class="col-md-3">
+
+            <button class="btn btn-dark" (click)="desistir()">DESISTIR</button>
+            
+        </div>
+
+    </div>
+
+</div>
+
+<div *ngIf="jogoAcabou == true">
+    <app-resultado [jogadorVenceu]="jogadorVenceu" [monstroVenceu]="monstroVenceu" [ambosPerderam]="ambosPerderam"></app-resultado>
+</div>
+
+<div class="container sombra pt-5 pb-5">
+
+    <div  id="teste1" *ngIf="clickAtaque || clickAtaqueEspecial || clickCura">
+        <!--
+        <div id="divPrincipal">
+            <div id="teste">
+                
+            </div>
+        </div>
+        -->
+
+        <!--
+        <div class="row pt-5 pb-5">
+            <div class="col text-center">
+                JOGADOR ATINGIU MONSTRO COM {{ataqueJogador}}.
+            </div>
+        </div>
+        -->
+        
+    </div>
+
+  
+    <div class="col text-center">
+        <div class=""></div>
+    </div>
+    
+</div>
+
